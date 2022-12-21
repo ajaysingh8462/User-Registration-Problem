@@ -43,6 +43,9 @@ namespace User_Registration
                     case 8:
                         valid.Passoword_Rule4();
                         break;
+                    case 9:
+                        valid.Email_All();
+                        break;
                     default:
                         Console.WriteLine("Please Enter valid option");
                         break;

@@ -146,5 +146,22 @@ namespace User_Registration
                 return null;
             }
         }
+        public string Email_All()
+        {
+            Console.WriteLine("Enter Email ");
+            string email = Console.ReadLine();
+            var emailregex = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
+            Regex regexlast = new Regex(emailregex);
+            if (regexlast.IsMatch(email))
+            {
+                Console.WriteLine(email + " Email is valid");
+                return email;
+            }
+            else
+            {
+                Console.WriteLine(email + " Email is invalid");
+                return null;
+            }
+        }
     }
 }
