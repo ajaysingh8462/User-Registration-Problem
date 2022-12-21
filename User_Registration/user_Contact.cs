@@ -46,12 +46,27 @@ namespace User_Registration
             Regex regexlast = new Regex(emailregex);
             if (regexlast.IsMatch(email))
             {
-                Console.WriteLine(email + " LastName is valid");
+                Console.WriteLine(email + " Email is valid");
                 return email;
             }
             else
             {
-                Console.WriteLine(email + " LastName is invalid");
+                Console.WriteLine(email + " Email is invalid");
+                return null;
+            }
+        }
+        public string Number(string number)
+        {
+            string Numberregex = "^91 [6-9]{1}[0-9]{9}$";
+            Regex regexlast = new Regex(Numberregex);
+            if (regexlast.IsMatch(number))
+            {
+                Console.WriteLine(number + " Number is valid");
+                return number;
+            }
+            else
+            {
+                Console.WriteLine(number + " Number is invalid");
                 return null;
             }
         }

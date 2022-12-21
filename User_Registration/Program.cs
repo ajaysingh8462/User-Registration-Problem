@@ -18,6 +18,8 @@ namespace User_Registration
             lastn.Lastname("Singh");
             user_Contact emailn = new user_Contact();
             emailn.Email("ajay.abc@bl.co.in");
+            user_Contact Phnum = new user_Contact();
+            Phnum.Number("91 9919828545");
 
         }
     }
