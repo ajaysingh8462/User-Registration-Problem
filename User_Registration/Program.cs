@@ -15,7 +15,7 @@ namespace User_Registration
             user_Contact valid= new user_Contact();
             while (true) 
             {
-                Console.WriteLine("1 Firstname \n2 Lastname \n3 Email \n4. Phonenumber \n5 Password \n6. Password rule2 atleast 1 Upper case");
+                Console.WriteLine("1 Firstname \n2 Lastname \n3 Email \n4. Phonenumber \n5 Password \n6. Password rule2 atleast 1 Upper case\n7. Password rule3  atleast 1 Upper case and 1 number");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -36,6 +36,9 @@ namespace User_Registration
                         break;
                     case 6:
                         valid.Passoword_Rule2();
+                        break;
+                    case 7:
+                        valid.Passoword_Rule3();
                         break;
                     default:
                         Console.WriteLine("Please Enter valid option");
