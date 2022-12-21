@@ -129,5 +129,22 @@ namespace User_Registration
                 return null;
             }
         }
+        public string Passoword_Rule4()
+        {
+            Console.WriteLine("Enter Password must be include 8 Characters and atleast 1 Upper case and atleast 1 number ");
+            string password = Console.ReadLine();
+            string Numberregex = "^(?=^.{8,}$)(?=.*?[0-9])(?=.*[@$!%*?&#)(?=.*?[A-Z])(?=.*[a-z]).*$";
+            Regex regexlast = new Regex(Numberregex);
+            if (regexlast.IsMatch(password))
+            {
+                Console.WriteLine(password + " Number is valid");
+                return password;
+            }
+            else
+            {
+                Console.WriteLine(password + " Number is invalid");
+                return null;
+            }
+        }
     }
 }
