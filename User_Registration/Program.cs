@@ -14,7 +14,8 @@ namespace User_Registration
         {
             user_Contact firstn= new user_Contact();
             firstn.Firstname("Ajay");
-            firstn.Firstname("ajay");
+            user_Contact lastn = new user_Contact();
+            lastn.Lastname("Singh");
 
         }
     }
