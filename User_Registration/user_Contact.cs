@@ -10,8 +10,10 @@ namespace User_Registration
 {
     internal class user_Contact
     {
-        public string Firstname(string name) 
+        public string Firstname() 
         {
+            Console.WriteLine("Enter Firstname Must be incude First character as cap");
+            string name = Console.ReadLine();
             string firstnameregex = "^[A-Z]{1}[a-zA-Z]{2,}$";
             Regex regexfirst = new Regex(firstnameregex);
             if (regexfirst.IsMatch(name))
@@ -25,8 +27,10 @@ namespace User_Registration
                 return null;
             }
         }
-        public string Lastname(string name)
+        public string Lastname()
         {
+            Console.WriteLine("Enter Lastname Must be incude First character as cap");
+            string name = Console.ReadLine();
             string lastnameregex = "^[A-Z]{1}[a-zA-Z]{2,}$";
             Regex regexlast = new Regex(lastnameregex);
             if (regexlast.IsMatch(name))
@@ -40,8 +44,10 @@ namespace User_Registration
                 return null;
             }
         }
-        public string Email(string email)
+        public string Email()
         {
+            Console.WriteLine("Enter Email ");
+            string email = Console.ReadLine();
             var emailregex = "^[0-9A-Za-z]+([.][0-9A-Za-z]+)[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
             Regex regexlast = new Regex(emailregex);
             if (regexlast.IsMatch(email))
@@ -55,8 +61,10 @@ namespace User_Registration
                 return null;
             }
         }
-        public string Number(string number)
+        public string Number()
         {
+            Console.WriteLine("Enter Phonenumber eg- 91 9855515254 ");
+            string number = Console.ReadLine();
             string Numberregex = "^91 [6-9]{1}[0-9]{9}$";
             Regex regexlast = new Regex(Numberregex);
             if (regexlast.IsMatch(number))
@@ -67,6 +75,23 @@ namespace User_Registration
             else
             {
                 Console.WriteLine(number + " Number is invalid");
+                return null;
+            }
+        }
+        public string Passoword()
+        {
+            Console.WriteLine("Enter Password must be include 8 Characters ");
+            string password = Console.ReadLine();
+            string Numberregex = "^[a-zA-Z]{8,}";
+            Regex regexlast = new Regex(Numberregex);
+            if (regexlast.IsMatch(password))
+            {
+                Console.WriteLine(password + " Number is valid");
+                return password;
+            }
+            else
+            {
+                Console.WriteLine(password + " Number is invalid");
                 return null;
             }
         }
