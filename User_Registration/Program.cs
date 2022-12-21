@@ -45,16 +45,7 @@ namespace User_Registration
                         break;
                 }
             }
-            user_Contact firstn= new user_Contact();
-            firstn.Firstname();
-            user_Contact lastn = new user_Contact();
-            lastn.Lastname();
-            user_Contact emailn = new user_Contact();
-            emailn.Email();
-            user_Contact Phnum = new user_Contact();
-            Phnum.Number();
-            user_Contact passwordn = new user_Contact();
-            passwordn.Passoword();
+            
 
         }
     }
