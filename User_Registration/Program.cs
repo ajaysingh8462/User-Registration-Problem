@@ -16,6 +16,8 @@ namespace User_Registration
             firstn.Firstname("Ajay");
             user_Contact lastn = new user_Contact();
             lastn.Lastname("Singh");
+            user_Contact emailn = new user_Contact();
+            emailn.Email("ajay.abc@bl.co.in");
 
         }
     }

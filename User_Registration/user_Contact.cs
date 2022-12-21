@@ -27,8 +27,8 @@ namespace User_Registration
         }
         public string Lastname(string name)
         {
-            string firstnameregex = "^[A-Z]{1}[a-zA-Z]{2,}$";
-            Regex regexlast = new Regex(firstnameregex);
+            string lastnameregex = "^[A-Z]{1}[a-zA-Z]{2,}$";
+            Regex regexlast = new Regex(lastnameregex);
             if (regexlast.IsMatch(name))
             {
                 Console.WriteLine(name+ " LastName is valid");
@@ -37,6 +37,21 @@ namespace User_Registration
             else
             {
                 Console.WriteLine(name+ " LastName is invalid");
+                return null;
+            }
+        }
+        public string Email(string email)
+        {
+            var emailregex = "^[0-9A-Za-z]+([.][0-9A-Za-z]+)[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
+            Regex regexlast = new Regex(emailregex);
+            if (regexlast.IsMatch(email))
+            {
+                Console.WriteLine(email + " LastName is valid");
+                return email;
+            }
+            else
+            {
+                Console.WriteLine(email + " LastName is invalid");
                 return null;
             }
         }
