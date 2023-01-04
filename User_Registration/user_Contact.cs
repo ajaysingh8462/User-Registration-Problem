@@ -8,29 +8,27 @@ using System.Xml.Linq;
 
 namespace User_Registration
 {
-    internal class user_Contact
+    public class user_Contact
     {
-        public string Firstname() 
+        public string Firstname(string Name) 
         {
-            Console.WriteLine("Enter Firstname Must be incude First character as cap");
-            string name = Console.ReadLine();
+            
             string firstnameregex = "^[A-Z]{1}[a-zA-Z]{2,}$";
             Regex regexfirst = new Regex(firstnameregex);
-            if (regexfirst.IsMatch(name))
+            if (regexfirst.IsMatch(Name))
             {
-                Console.WriteLine(name+ " FirstName is valid");
-                return name;
+                Console.WriteLine(Name + " FirstName is valid");
+                return Name;
             }
             else
             {
-                Console.WriteLine(name+ " FirstName is invalid");
+                Console.WriteLine(Name + " FirstName is invalid");
                 return null;
             }
         }
-        public string Lastname()
+        public string Lastname(string name)
         {
-            Console.WriteLine("Enter Lastname Must be incude First character as cap");
-            string name = Console.ReadLine();
+            
             string lastnameregex = "^[A-Z]{1}[a-zA-Z]{2,}$";
             Regex regexlast = new Regex(lastnameregex);
             if (regexlast.IsMatch(name))
@@ -44,10 +42,9 @@ namespace User_Registration
                 return null;
             }
         }
-        public string Email()
+        public string Email(string email)
         {
-            Console.WriteLine("Enter Email ");
-            string email = Console.ReadLine();
+            
             var emailregex = "^[0-9A-Za-z]+([.][0-9A-Za-z]+)[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
             Regex regexlast = new Regex(emailregex);
             if (regexlast.IsMatch(email))
@@ -61,15 +58,14 @@ namespace User_Registration
                 return null;
             }
         }
-        public string Number()
+        public string Number(string number)
         {
-            Console.WriteLine("Enter Phonenumber eg- 91 9855515254 ");
-            string number = Console.ReadLine();
-            string Numberregex = "^91 [6-9]{1}[0-9]{9}$";
+            
+            string Numberregex = "^[0-9]{1,3} [6-9]{1}[0-9]{9}$";
             Regex regexlast = new Regex(Numberregex);
             if (regexlast.IsMatch(number))
             {
-                Console.WriteLine(number + " Number is valid");
+                Console.WriteLine(number + " Number is valid"); 
                 return number;
             }
             else
@@ -78,10 +74,9 @@ namespace User_Registration
                 return null;
             }
         }
-        public string Passoword()
+        public string Passoword(string password)
         {
-            Console.WriteLine("Enter Password must be include 8 Characters ");
-            string password = Console.ReadLine();
+            
             string Numberregex = "^[a-zA-Z]{8,}";
             Regex regexlast = new Regex(Numberregex);
             if (regexlast.IsMatch(password))
@@ -95,10 +90,9 @@ namespace User_Registration
                 return null;
             }
         }
-        public string Passoword_Rule2()
+        public string Passoword_Rule2(string password)
         {
-            Console.WriteLine("Enter Password must be include 8 Characters and atleast 1 Upper case ");
-            string password = Console.ReadLine();
+            
             string Numberregex = "^(?=^.{8,}$)(?=.*?[A-Z])(?=.*[a-z]).*$";
             Regex regexlast = new Regex(Numberregex);
             if (regexlast.IsMatch(password))
@@ -112,10 +106,9 @@ namespace User_Registration
                 return null;
             }
         }
-        public string Passoword_Rule3()
+        public string Passoword_Rule3(string password)
         {
-            Console.WriteLine("Enter Password must be include 8 Characters and atleast 1 Upper case and atleast 1 number ");
-            string password = Console.ReadLine();
+            
             string Numberregex = "^(?=^.{8,}$)(?=.*?[0-9])(?=.*?[A-Z])(?=.*[a-z]).*$";
             Regex regexlast = new Regex(Numberregex);
             if (regexlast.IsMatch(password))
@@ -129,10 +122,9 @@ namespace User_Registration
                 return null;
             }
         }
-        public string Passoword_Rule4()
+        public string Passoword_Rule4(string password)
         {
-            Console.WriteLine("Enter Password must be include 8 Characters and atleast 1 Upper case and atleast 1 number ");
-            string password = Console.ReadLine();
+            
             string Numberregex = "^(?=^.{8,}$)(?=.*?[0-9])(?=.*[@$!%*?&#)(?=.*?[A-Z])(?=.*[a-z]).*$";
             Regex regexlast = new Regex(Numberregex);
             if (regexlast.IsMatch(password))

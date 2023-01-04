@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace User_Registration
 {
-    class program
+    public class program
     {
         public static void Main(string[] args)
         {
@@ -20,28 +20,44 @@ namespace User_Registration
                 switch (option)
                 {
                     case 1:
-                        valid.Firstname();
+                        Console.WriteLine("Enter Firstname Must be incude First character as cap");
+                        string name = Console.ReadLine();
+                        valid.Firstname(name);
                         break;
                     case 2:
-                        valid.Lastname();
+                        Console.WriteLine("Enter Lastname Must be incude First character as cap");
+                        string lname = Console.ReadLine();
+                        valid.Lastname(lname);
                         break;
                     case 3:
-                        valid.Email();
+                        Console.WriteLine("Enter Email ");
+                        string email = Console.ReadLine();
+                        valid.Email(email);
                         break;
                     case 4:
-                        valid.Number();
+                        Console.WriteLine("Enter Phonenumber eg- (1,91,92 -etc) 9855515254 ");
+                        string number = Console.ReadLine();
+                        valid.Number(number);
                         break;
                     case 5:
-                        valid.Passoword();
+                        Console.WriteLine("Enter Password must be include 8 Characters ");
+                        string password = Console.ReadLine();
+                        valid.Passoword(password);
                         break;
                     case 6:
-                        valid.Passoword_Rule2();
+                        Console.WriteLine("Enter Password must be include 8 Characters and atleast 1 Upper case ");
+                        string password_2 = Console.ReadLine();
+                        valid.Passoword_Rule2(password_2);
                         break;
                     case 7:
-                        valid.Passoword_Rule3();
+                        Console.WriteLine("Enter Password must be include 8 Characters and atleast 1 Upper case and atleast 1 number ");
+                        string password_3 = Console.ReadLine();
+                        valid.Passoword_Rule3(password_3);
                         break;
                     case 8:
-                        valid.Passoword_Rule4();
+                        Console.WriteLine("Enter Password must be include 8 Characters and atleast 1 Upper case and atleast 1 number ");
+                        string password_4 = Console.ReadLine();
+                        valid.Passoword_Rule4(password_4);
                         break;
                     case 9:
                         valid.Email_All();
