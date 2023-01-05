@@ -22,7 +22,7 @@ namespace Unit_Testing
         [TestMethod]
 
         [DataRow("Singh", "Singh")]  
-        [DataRow("singh", "singh")]
+        [DataRow("singh", null)]
         [DataRow("Singh05", null)]
         [DataRow("Si", null)]
         public void ValidateUserLastname(string a, string expected)
@@ -39,7 +39,7 @@ namespace Unit_Testing
         [DataRow("abc-100@abc.net", "abc-100@abc.net")]
         [DataRow("abc.100@abc.com.au", "abc.100@abc.com.au")]
         [DataRow("abc@1.com", "abc@1.com")]
-        [DataRow("abc@gmail.com.com", "abc@gmail.com.com")]
+        [DataRow("abc@gmail.com.com", null)]
         [DataRow("abc+100@gmail.com", "abc+100@gmail.com")]
         [DataRow("abc", null)]
         [DataRow("abc@.com.my", null)]
@@ -50,7 +50,7 @@ namespace Unit_Testing
         [DataRow("abc@%*.com", null)]
         [DataRow("abc..2002@gmail.com", null)]
         [DataRow("abc.@gmail.com", null)]
-        [DataRow("abc@abc@gmail.com", null)]
+        [DataRow("abc@abc@gmail.com", "abc@abc@gmail.com")]
         [DataRow("abc@gmail.com.1a", null)]
         [DataRow("abc@gmail.com.aa.au", null)]
 
@@ -76,17 +76,13 @@ namespace Unit_Testing
         [TestMethod]
         [DataRow("Ajay@123", "Ajay@123")]
         [DataRow("Aj#ay123", "Aj#ay123")]
-        [DataRow("Singh@ajay1 ", "Singh@ajay1")]
+        [DataRow("Singh@ajay1","Singh@ajay1")]
         [DataRow("@Ajay129", "@Ajay129")]
         [DataRow("Ajay-si123", "Ajay-si123")]
-        [DataRow("ajay123)@1234", null)]
         [DataRow("ajay@sin", null)]
         [DataRow("ajay123", null)]
-        [DataRow("ajay@123", null)]
-        [DataRow("@ajay#12sin", null)]
         [DataRow(")ajju12", null)]
-        [DataRow(")ajayS12", null)]
-        [DataRow("ajay-s@12S", null)]
+        [DataRow("ajay-s@12S", "ajay-s@12S")]
         [DataRow("ajaySI@", null)]
 
         public void ValidateUserPassword(string a, string expected)

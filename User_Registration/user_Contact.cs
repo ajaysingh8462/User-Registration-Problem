@@ -26,26 +26,26 @@ namespace User_Registration
                 return null;
             }
         }
-        public string Lastname(string name)
+        public string Lastname(string Name)
         {
             
             string lastnameregex = "^[A-Z]{1}[a-zA-Z]{2,}$";
             Regex regexlast = new Regex(lastnameregex);
-            if (regexlast.IsMatch(name))
+            if (regexlast.IsMatch(Name))
             {
-                Console.WriteLine(name+ " LastName is valid");
-                return name;
+                Console.WriteLine(Name+ " LastName is valid");
+                return Name;
             }
             else
             {
-                Console.WriteLine(name+ " LastName is invalid");
+                Console.WriteLine(Name + " LastName is invalid");
                 return null;
             }
         }
         public string Email(string email)
         {
             
-            var emailregex = "^[0-9A-Za-z]+([.][0-9A-Za-z]+)[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
+            var emailregex = "^[0-9A-Za-z]+(.[0-9A-Za-z]+)[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
             Regex regexlast = new Regex(emailregex);
             if (regexlast.IsMatch(email))
             {
